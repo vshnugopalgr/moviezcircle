@@ -2,35 +2,76 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>MovieZCircle - Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MovieZCircle</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #111;
+      background-color: #111;
       color: #fff;
+      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 20px;
+      padding: 0;
     }
-    h1 {
+    header {
       text-align: center;
-      margin-bottom: 30px;
+      padding: 20px;
+      background-color: #000;
       color: #ff5722;
+      font-size: 28px;
+      font-weight: bold;
     }
-    .grid {
+    .container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
-      max-width: 1000px;
-      margin: auto;
+      padding: 40px;
     }
     .movie-card {
-      background: #1c1c1c;
+      background-color: #1c1c1c;
       border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 0 10px rgba(255,255,255,0.05);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.5);
       transition: transform 0.3s;
     }
     .movie-card:hover {
       transform: scale(1.03);
     }
+    .poster {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .movie-title {
+      padding: 10px;
+      font-size: 18px;
+      text-align: center;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>🎬 MovieZCircle</header>
+  <div class="container">
+
+    <!-- Fifty Shades of Grey -->
+    <div class="movie-card">
+      <a href="fsg.html">
+        <img class="poster" src="https://i.ibb.co/3yqQfKcX/fsg-2015.jpg" alt="Fifty Shades of Grey Poster" />
+        <div class="movie-title">Fifty Shades of Grey (2015)</div>
+      </a>
+    </div>
+
+    <!-- Unfaithful -->
+    <div class="movie-card">
+      <a href="unfaithful.html">
+        <img class="poster" src="https://i.ibb.co/MDXh3NkN/unfaithful.jpg" alt="Unfaithful Poster" />
+        <div class="movie-title">Unfaithful (2002)</div>
+      </a>
+    </div>
+
+  </div>
+</body>
+</html>
