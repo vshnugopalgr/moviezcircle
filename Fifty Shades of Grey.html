@@ -3,65 +3,91 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Fifty Shades of Grey (2015)</title>
+  <title>FSG (2015) - Movie Details</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
   <style>
     body {
-      background-color: #111;
-      color: #fff;
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #0d0d0d;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      padding: 40px 20px;
     }
     .container {
-      max-width: 900px;
-      margin: auto;
+      background: #1a1a1a;
+      border-radius: 16px;
       padding: 30px;
+      max-width: 900px;
+      width: 100%;
+      display: flex;
+      gap: 30px;
+      box-shadow: 0 0 20px rgba(255, 87, 34, 0.2);
     }
     .poster {
-      max-width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.7);
+      max-width: 220px;
+      border-radius: 12px;
     }
-    h1 {
-      font-size: 32px;
-      margin-top: 20px;
+    .details {
+      flex: 1;
+    }
+    .title {
+      font-size: 28px;
       color: #ff5722;
+      margin: 0;
     }
-    .info {
-      margin: 10px 0;
-      font-size: 16px;
+    .meta {
+      margin: 8px 0;
+      font-size: 14px;
       color: #ccc;
     }
-    .description {
-      margin-top: 20px;
-      line-height: 1.6;
-      font-size: 16px;
-    }
-    .button {
+    .genres span {
+      background: #ff5722;
+      padding: 4px 12px;
+      margin-right: 6px;
+      border-radius: 50px;
+      font-size: 12px;
       display: inline-block;
-      margin-top: 25px;
-      padding: 12px 20px;
-      background-color: #ff5722;
-      color: white;
-      border: none;
-      border-radius: 6px;
+    }
+    .description {
+      margin: 20px 0;
+      line-height: 1.6;
+    }
+    .buttons a {
+      display: inline-block;
+      background: #ff5722;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 8px;
+      margin-right: 10px;
       text-decoration: none;
       font-weight: bold;
+      transition: background 0.3s;
     }
-    .button:hover {
-      background-color: #e64a19;
+    .buttons a:hover {
+      background: #e64a19;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <img class="poster" src="https://i.ibb.co/3yqQfKcX/fsg-2015.jpg" alt="Fifty Shades of Grey Poster">
-    <h1>Fifty Shades of Grey (2015)</h1>
-    <div class="info">🎭 Drama, Romance | 📅 2015 | ⏱️ 2h 5m</div>
-    <div class="description">
-      Literature student Anastasia Steele's life changes forever when she meets handsome, yet tormented, billionaire Christian Grey.
+    <img class="poster" src="https://i.ibb.co/3yqQfKcX/fsg-2015.jpg" alt="FSG 2015 Poster">
+    <div class="details">
+      <h1 class="title">FSG (2015)</h1>
+      <div class="meta">Rated R • 1h 50min • Released: 2015</div>
+      <div class="genres">
+        <span>Drama</span>
+        <span>Thriller</span>
+      </div>
+      <div class="description">
+        A tense and gripping exploration of identity, secrets, and emotional turmoil. FSG is a haunting portrayal of inner conflict and raw human emotion.
+      </div>
+      <div class="buttons">
+        <a href="https://www.youtube.com/results?search_query=FSG+2015+trailer" target="_blank">🎬 Watch Trailer</a>
+        <a href="https://mxdrop.to/e/36p1mvwvfmzzpen" target="_blank">▶️ Watch Now</a>
+      </div>
     </div>
-    <a class="button" href="https://mxdrop.to/e/36p1mvwvfmzzpen" target="_blank">▶️ Watch Now</a>
   </div>
 </body>
 </html>
