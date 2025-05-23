@@ -2,89 +2,85 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>movieZcircle – Movies</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>movieZcircle – Movie Collection</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
+      margin: 0;
       font-family: 'Inter', sans-serif;
       background-color: #0d0d0d;
       color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       padding: 40px 20px;
     }
 
     h1 {
-      text-align: center;
-      font-size: 2rem;
+      font-size: 28px;
       margin-bottom: 40px;
+      text-align: center;
     }
 
-    .grid {
+    h1::before {
+      content: "🎬 ";
+    }
+
+    .movie-grid {
       display: flex;
       flex-wrap: wrap;
-      gap: 30px;
       justify-content: center;
+      gap: 30px;
     }
 
     .movie-card {
-      background-color: #1a1a1a;
+      background: #1a1a1a;
       border-radius: 12px;
-      padding: 16px;
+      padding: 20px;
       width: 250px;
       text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
       transition: transform 0.3s ease;
     }
 
     .movie-card:hover {
-      transform: scale(1.05);
+      transform: translateY(-5px);
     }
 
     .movie-card img {
       width: 100%;
-      height: auto;
       border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      height: auto;
+      margin-bottom: 15px;
     }
 
     .movie-title {
-      margin-top: 12px;
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: #f97316;
+      font-size: 18px;
+      font-weight: bold;
+      color: #ff6600;
     }
 
-    .movie-card a {
-      color: inherit;
+    a {
       text-decoration: none;
     }
   </style>
 </head>
 <body>
-  <h1>🎬 movieZcircle – Movie Collection</h1>
-  <div class="grid">
-
-    <div class="movie-card">
-      <a href="fsg.html">
-        <img src="https://upload.wikimedia.org/wikipedia/en/9/95/Fifty_Shades_of_Grey_poster.jpg" alt="Fifty Shades of Grey Poster">
+  <h1>movieZcircle – Movie Collection</h1>
+  <div class="movie-grid">
+    <a href="fsg.html">
+      <div class="movie-card">
+        <img src="https://i.ibb.co/3yqQfKcX/fsg-2015.jpg" alt="Fifty Shades of Grey Poster" />
         <div class="movie-title">Fifty Shades of Grey (2015)</div>
-      </a>
-    </div>
-
-    <div class="movie-card">
-      <a href="unfaithful.html">
-        <img src="https://upload.wikimedia.org/wikipedia/en/6/6c/Unfaithful_2002_poster.jpg" alt="Unfaithful Poster">
+      </div>
+    </a>
+    <a href="unfaithful.html">
+      <div class="movie-card">
+        <img src="https://i.ibb.co/JR0WpkY7/MV5-BMDFl-OTJh-ODIt-OTgz-Yi00-Mm-Rj-LTkz-MTkt-ODVh-YTc4-NGUz-NDEy-Xk-Ey-Xk-Fqc-Gc-V1-FMjpg-UX1000.jpg" alt="Unfaithful Poster" />
         <div class="movie-title">Unfaithful (2002)</div>
-      </a>
-    </div>
-
-    <!-- Add more movie cards here -->
-
+      </div>
+    </a>
   </div>
 </body>
 </html>
