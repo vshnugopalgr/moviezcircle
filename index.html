@@ -2,80 +2,89 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MovieZCircle</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>movieZcircle – Movies</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
   <style>
-    body {
-      background-color: #111;
-      color: #fff;
-      font-family: Arial, sans-serif;
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
-    header {
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0d0d0d;
+      color: #fff;
+      padding: 40px 20px;
+    }
+
+    h1 {
       text-align: center;
-      padding: 20px;
-      background-color: #000;
-      color: #ff5722;
-      font-size: 28px;
-      font-weight: bold;
+      font-size: 2rem;
+      margin-bottom: 40px;
     }
-    .container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      padding: 40px;
+
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
     }
+
     .movie-card {
-      background-color: #1c1c1c;
+      background-color: #1a1a1a;
       border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.5);
-      transition: transform 0.3s;
+      padding: 16px;
+      width: 250px;
+      text-align: center;
+      transition: transform 0.3s ease;
     }
+
     .movie-card:hover {
-      transform: scale(1.03);
+      transform: scale(1.05);
     }
-    .poster {
+
+    .movie-card img {
       width: 100%;
       height: auto;
-      display: block;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     }
+
     .movie-title {
-      padding: 10px;
-      font-size: 18px;
-      text-align: center;
+      margin-top: 12px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #f97316;
     }
-    a {
+
+    .movie-card a {
       color: inherit;
       text-decoration: none;
     }
   </style>
 </head>
 <body>
-  <header>🎬 MovieZCircle</header>
-  <div class="container">
+  <h1>🎬 movieZcircle – Movie Collection</h1>
+  <div class="grid">
 
-    <!-- Fifty Shades of Grey -->
     <div class="movie-card">
       <a href="fsg.html">
-        <img src="https://i.ibb.co/3yqQfKcX/fsg-2015.jpg" alt="Fifty Shades of Grey (2015)">
-        <h3>Fifty Shades of Grey (2015)</h3>
+        <img src="https://upload.wikimedia.org/wikipedia/en/9/95/Fifty_Shades_of_Grey_poster.jpg" alt="Fifty Shades of Grey Poster">
+        <div class="movie-title">Fifty Shades of Grey (2015)</div>
       </a>
     </div>
 
-    <!-- Unfaithful -->
     <div class="movie-card">
       <a href="unfaithful.html">
-        <img src="https://i.ibb.co/JR0WpkY7/MV5-BMDFl-OTJh-ODIt-OTgz-Yi00-Mm-Rj-LTkz-MTkt-ODVh-YTc4-NGUz-NDEy-Xk-Ey-Xk-Fqc-Gc-V1-FMjpg-UX1000.jpg" alt="Unfaithful (2002)">
-        <h3>Unfaithful (2002)</h3>
+        <img src="https://upload.wikimedia.org/wikipedia/en/6/6c/Unfaithful_2002_poster.jpg" alt="Unfaithful Poster">
+        <div class="movie-title">Unfaithful (2002)</div>
       </a>
     </div>
 
+    <!-- Add more movie cards here -->
+
   </div>
-
-  <!-- ✅ Ad Script placed here -->
-  <script type='text/javascript' src='//pl26725896.profitableratecpm.com/ca/58/4c/ca584c2c393e2b999e9af7ba669b7b43.js'></script>
-
 </body>
 </html>
