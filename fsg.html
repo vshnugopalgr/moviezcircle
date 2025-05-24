@@ -1,116 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fifty Shades of Grey (2015) - Movie Details</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fifty Shades of Grey (2015) - MovieZCircle</title>
   <style>
     body {
-      font-family: 'Inter', sans-serif;
-      background: #0d0d0d;
-      color: #eee;
+      background-color: #111;
+      color: #fff;
+      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
     }
-
+    header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      background-color: #000;
+    }
+    .logo {
+      height: 80px;
+    }
     .container {
-      max-width: 900px;
+      max-width: 800px;
       margin: 40px auto;
-      background: #1c1c1c;
-      padding: 30px;
-      border-radius: 16px;
-      box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
-    }
-
-    .poster {
-      width: 220px;
+      padding: 20px;
+      background-color: #1c1c1c;
       border-radius: 12px;
-      float: left;
-      margin-right: 30px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.5);
     }
-
-    .details {
-      overflow: hidden;
+    .poster {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.6);
     }
-
-    .title {
-      font-size: 32px;
-      font-weight: bold;
-      margin-top: 0;
-      color: #ff5722;
+    .movie-title {
+      font-size: 24px;
+      margin: 20px 0 10px;
+      text-align: center;
     }
-
-    .meta {
-      color: #aaa;
-      font-size: 14px;
-      margin: 10px 0;
+    .genre {
+      color: #ccc;
+      text-align: center;
+      margin-bottom: 20px;
     }
-
-    .genre span {
-      background: #ff5722;
-      color: #fff;
-      padding: 4px 12px;
-      border-radius: 20px;
-      margin-right: 6px;
-      font-size: 13px;
-      display: inline-block;
-      margin-top: 10px;
+    .player-switch {
+      text-align: center;
+      margin: 20px 0;
     }
-
-    .description {
-      margin-top: 20px;
-      line-height: 1.6;
-    }
-
-    .buttons a {
-      display: inline-block;
-      background: #ff5722;
+    .player-switch button {
+      margin: 5px;
+      padding: 10px 20px;
+      background-color: #ff5722;
       color: white;
-      padding: 10px 18px;
-      border-radius: 8px;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .player-switch button:hover {
+      background-color: #e64a19;
+    }
+    .video-player {
+      display: none;
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 12px;
+    }
+    .video-player iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    .telegram-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #0088cc;
+      color: white;
+      padding: 12px 16px;
+      border-radius: 50px;
       text-decoration: none;
-      margin: 15px 10px 0 0;
-      transition: background 0.3s;
-    }
-
-    .buttons a:hover {
-      background: #e64a19;
-    }
-
-    @media (max-width: 600px) {
-      .poster {
-        float: none;
-        display: block;
-        margin: 0 auto 20px;
-        width: 100%;
-        max-width: 300px;
-      }
-      .details {
-        text-align: center;
-      }
+      font-weight: bold;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      z-index: 999;
     }
   </style>
 </head>
 <body>
+  <header>
+    <img src="https://i.ibb.co/zTvwVs6M/1.png" alt="MovieZCircle Logo" class="logo" />
+  </header>
+
   <div class="container">
-    <div class="details">
-      <img class="poster" src="https://i.ibb.co/3yqQfKcX/fsg-2015.jpg" alt="Fifty Shades of Grey (2015) Poster">
-      <h1 class="title">Fifty Shades of Grey (2015)</h1>
-      <div class="meta">Rated R | 2h 5min | Released: 2015</div>
-      <div class="genre">
-        <span>Romance</span>
-        <span>Drama</span>
-      </div>
-      <div class="description">
-        Literature student Anastasia Steele's life changes forever when she meets handsome, yet tormented, billionaire Christian Grey, leading to a complex romantic and physical relationship.
-      </div>
-      <div class="buttons">
-        <a href="https://www.youtube.com/watch?v=SfZWFDs0LxA" target="_blank">Watch Trailer</a>
-        <a href="https://mxdrop.to/e/36p1mvwvfmzzpen" target="_blank">Watch Now (MixDrop)</a>
-        <a href="https://streamtape.com/v/7Y3KlJpWdLuMe6/FSG2015" target="_blank">Watch Now (Streamtape)</a>
-      </div>
+    <img class="poster" src="https://i.ibb.co/3yqQfKcX/fsg-2015.jpg" alt="Fifty Shades of Grey (2015)" />
+    <h1 class="movie-title">Fifty Shades of Grey (2015)</h1>
+    <p class="genre">Drama, Romance</p>
+
+    <!-- Player Switch Buttons -->
+    <div class="player-switch">
+      <button onclick="showPlayer('voe')">▶️ VOE</button>
+      <button onclick="showPlayer('mixdrop')">▶️ MixDrop</button>
+      <button onclick="showPlayer('streamtape')">▶️ Streamtape</button>
+    </div>
+
+    <!-- VOE Player -->
+    <div id="voe" class="video-player">
+      <iframe src="https://voe.sx/e/YOUR_VOE_ID" allowfullscreen allow="autoplay"></iframe>
+    </div>
+
+    <!-- MixDrop Player -->
+    <div id="mixdrop" class="video-player">
+      <iframe src="//mxdrop.to/e/YOUR_MIXDROP_ID" scrolling="no" frameborder="0" allowfullscreen="true"></iframe>
+    </div>
+
+    <!-- Streamtape Player -->
+    <div id="streamtape" class="video-player">
+      <iframe src="https://streamtape.com/e/YOUR_STREAMTAPE_ID" allowfullscreen allow="autoplay"></iframe>
     </div>
   </div>
+
+  <script>
+    function showPlayer(id) {
+      const players = document.querySelectorAll('.video-player');
+      players.forEach(player => player.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+    }
+    // Show VOE by default
+    showPlayer('voe');
+  </script>
+
+  <!-- Ad Script -->
+  <script type="text/javascript" src="//pl26725896.profitableratecpm.com/ca/58/4c/ca584c2c393e2b999e9af7ba669b7b43.js"></script>
+
+  <!-- Telegram Floating Button -->
+  <a href="https://t.me/movieZcircles" class="telegram-btn" target="_blank">📢 Join Telegram</a>
 </body>
 </html>
