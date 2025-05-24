@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Fifty Shades of Grey (2015) - MovieZCircle</title>
   <style>
     body {
@@ -70,26 +70,14 @@
       overflow: hidden;
       border-radius: 12px;
     }
-    .video-player iframe {
+    .video-player iframe,
+    .video-player video {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
       border: none;
-    }
-    .telegram-btn {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #0088cc;
-      color: white;
-      padding: 12px 16px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: bold;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-      z-index: 999;
     }
   </style>
 </head>
@@ -105,24 +93,34 @@
 
     <!-- Player Switch Buttons -->
     <div class="player-switch">
+      <button onclick="showPlayer('webtor')">▶️ Webtor</button>
       <button onclick="showPlayer('voe')">▶️ VOE</button>
       <button onclick="showPlayer('mixdrop')">▶️ MixDrop</button>
       <button onclick="showPlayer('streamtape')">▶️ Streamtape</button>
     </div>
 
+    <!-- Webtor Player -->
+    <div id="webtor" class="video-player">
+      <video
+        controls
+        src="magnet:?xt=urn:btih:4d113d28b14ea6cf66950b645f02ff79ec543e0b&dn=Fifty+Shades+of+Grey+%282015%29+%5B1080p%5D"
+        data-path="/Fifty Shades of Grey (2015) [1080p]/Fifty.Shades.of.Grey.2015.1080p.BluRay.x264.YIFY.mp4">
+      </video>
+    </div>
+
     <!-- VOE Player -->
     <div id="voe" class="video-player">
-      <iframe src="https://voe.sx/e/YOUR_VOE_ID" allowfullscreen allow="autoplay"></iframe>
+      <iframe src="https://voe.sx/e/xxxxx" allowfullscreen allow="autoplay"></iframe>
     </div>
 
     <!-- MixDrop Player -->
     <div id="mixdrop" class="video-player">
-      <iframe src="//mxdrop.to/e/YOUR_MIXDROP_ID" scrolling="no" frameborder="0" allowfullscreen="true"></iframe>
+      <iframe src="//mxdrop.to/e/xxxxx" scrolling="no" frameborder="0" allowfullscreen="true"></iframe>
     </div>
 
     <!-- Streamtape Player -->
     <div id="streamtape" class="video-player">
-      <iframe src="https://streamtape.com/e/YOUR_STREAMTAPE_ID" allowfullscreen allow="autoplay"></iframe>
+      <iframe src="https://streamtape.com/e/xxxxx" allowfullscreen allow="autoplay"></iframe>
     </div>
   </div>
 
@@ -132,14 +130,14 @@
       players.forEach(player => player.style.display = 'none');
       document.getElementById(id).style.display = 'block';
     }
-    // Show VOE by default
-    showPlayer('voe');
+    // Show Webtor by default
+    showPlayer('webtor');
   </script>
 
-  <!-- Ad Script -->
-  <script type="text/javascript" src="//pl26725896.profitableratecpm.com/ca/58/4c/ca584c2c393e2b999e9af7ba669b7b43.js"></script>
+  <!-- Webtor SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@webtor/embed-sdk-js/dist/index.min.js" charset="utf-8" async></script>
 
-  <!-- Telegram Floating Button -->
-  <a href="https://t.me/movieZcircles" class="telegram-btn" target="_blank">📢 Join Telegram</a>
+  <!-- Ad Script (optional) -->
+  <script type="text/javascript" src="//pl26725896.profitableratecpm.com/ca/58/4c/ca584c2c393e2b999e9af7ba669b7b43.js"></script>
 </body>
 </html>
