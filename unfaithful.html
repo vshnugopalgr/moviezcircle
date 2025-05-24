@@ -1,116 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Unfaithful (2002) - Movie Details</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unfaithful (2002) – MovieZCircle</title>
   <style>
     body {
-      font-family: 'Inter', sans-serif;
-      background: #0d0d0d;
-      color: #eee;
-      margin: 0;
-      padding: 0;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: 40px auto;
-      background: #1c1c1c;
-      padding: 30px;
-      border-radius: 16px;
-      box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
-    }
-
-    .poster {
-      width: 220px;
-      border-radius: 12px;
-      float: left;
-      margin-right: 30px;
-    }
-
-    .details {
-      overflow: hidden;
-    }
-
-    .title {
-      font-size: 32px;
-      font-weight: bold;
-      margin-top: 0;
-      color: #ff5722;
-    }
-
-    .meta {
-      color: #aaa;
-      font-size: 14px;
-      margin: 10px 0;
-    }
-
-    .genre span {
-      background: #ff5722;
+      background-color: #111;
       color: #fff;
-      padding: 4px 12px;
-      border-radius: 20px;
-      margin-right: 6px;
-      font-size: 13px;
-      display: inline-block;
-      margin-top: 10px;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
     }
-
-    .description {
-      margin-top: 20px;
-      line-height: 1.6;
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+      background-color: #1c1c1c;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
     }
-
-    .buttons a {
-      display: inline-block;
-      background: #ff5722;
+    h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+    .tags {
+      color: #bbb;
+      margin-bottom: 20px;
+    }
+    .poster {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    .button-group {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 15px;
+      flex-wrap: wrap;
+    }
+    .button-group button {
+      padding: 10px 20px;
+      border: none;
+      background-color: #ff5722;
       color: white;
-      padding: 10px 18px;
-      border-radius: 8px;
-      text-decoration: none;
-      margin: 15px 10px 0 0;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
       transition: background 0.3s;
     }
-
-    .buttons a:hover {
-      background: #e64a19;
+    .button-group button:hover {
+      background-color: #e64a19;
     }
-
-    @media (max-width: 600px) {
-      .poster {
-        float: none;
-        display: block;
-        margin: 0 auto 20px;
-        width: 100%;
-        max-width: 300px;
-      }
-      .details {
-        text-align: center;
-      }
+    .responsive-player {
+      position: relative;
+      padding-top: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+    .responsive-player iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 10px;
+    }
+    .player-wrapper {
+      display: none;
+    }
+    .player-wrapper.active {
+      display: block;
+      margin-bottom: 10px;
+    }
+    .fallback-link {
+      text-align: center;
+      margin-top: 10px;
+    }
+    .fallback-link a {
+      color: #ff5722;
+      font-weight: bold;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="details">
-      <img class="poster" src="https://i.ibb.co/JR0WpkY7/MV5-BMDFl-OTJh-ODIt-OTgz-Yi00-Mm-Rj-LTkz-MTkt-ODVh-YTc4-NGUz-NDEy-Xk-Ey-Xk-Fqc-Gc-V1-FMjpg-UX1000.jpg" alt="Unfaithful (2002) Poster">
-      <h1 class="title">Unfaithful (2002)</h1>
-      <div class="meta">Rated R | 2h 4min | Released: 2002</div>
-      <div class="genre">
-        <span>Thriller</span>
-        <span>Drama</span>
+    <h1>Unfaithful (2002)</h1>
+    <p class="tags">Drama, Thriller</p>
+    <img class="poster" src="https://i.ibb.co/JR0WpkY7/MV5-BMDFl-OTJh-ODIt-OTgz-Yi00-Mm-Rj-LTkz-MTkt-ODVh-YTc4-NGUz-NDEy-Xk-Ey-Xk-Fqc-Gc-V1-FMjpg-UX1000.jpg" alt="Unfaithful (2002) Poster" />
+
+    <div class="button-group">
+      <button onclick="switchPlayer('streamtape')">📺 StreamTape</button>
+      <button onclick="switchPlayer('mixdrop')">📺 MixDrop</button>
+    </div>
+
+    <div id="streamtape" class="player-wrapper active">
+      <div class="responsive-player">
+        <iframe src="https://streamtape.com/e/3amDvdl2qjUD2g/UF2002" allowfullscreen></iframe>
       </div>
-      <div class="description">
-        A married woman’s temptation toward a passionate affair spirals into deceit, guilt, and dangerous consequences. A gripping drama about love, betrayal, and emotional limits.
-      </div>
-      <div class="buttons">
-        <a href="https://www.youtube.com/watch?v=XXxgZWr5FjY" target="_blank">Watch Trailer</a>
-        <a href="https://mxdrop.to/e/4drxzvjeup89xn" target="_blank">Watch Now (MixDrop)</a>
-        <a href="https://streamtape.com/v/3amDvdl2qjUD2g/UF2002" target="_blank">Watch Now (Streamtape)</a>
+      <div class="fallback-link">
+        <a href="https://streamtape.com/e/3amDvdl2qjUD2g/UF2002" target="_blank">🎬 Open Fullscreen (StreamTape)</a>
       </div>
     </div>
+
+    <div id="mixdrop" class="player-wrapper">
+      <div class="responsive-player">
+        <iframe src="https://mxdrop.to/e/4drxzvjeup89xn" allowfullscreen></iframe>
+      </div>
+      <div class="fallback-link">
+        <a href="https://mxdrop.to/e/4drxzvjeup89xn" target="_blank">🎬 Open Fullscreen (MixDrop)</a>
+      </div>
+    </div>
+
+    <p style="margin-top: 20px; color: #ccc;">
+      A New York suburban couple’s marriage takes a dark turn when the wife begins a passionate affair that leads to tragic consequences. *Unfaithful* is a gripping exploration of betrayal, guilt, and consequences.
+    </p>
   </div>
+
+  <script>
+    function switchPlayer(playerId) {
+      document.querySelectorAll('.player-wrapper').forEach(wrapper => {
+        wrapper.classList.remove('active');
+      });
+      document.getElementById(playerId).classList.add('active');
+    }
+  </script>
 </body>
 </html>
