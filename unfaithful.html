@@ -13,7 +13,7 @@
       padding: 20px;
     }
     .container {
-      max-width: 800px;
+      max-width: 700px;
       margin: auto;
       background-color: #1c1c1c;
       padding: 20px;
@@ -21,58 +21,45 @@
       box-shadow: 0 0 15px rgba(0,0,0,0.5);
     }
     h1 {
-      font-size: 28px;
+      font-size: 26px;
       margin-bottom: 10px;
+      text-align: center;
     }
     .tags {
       color: #bbb;
+      text-align: center;
       margin-bottom: 20px;
     }
     .poster {
       width: 100%;
       border-radius: 10px;
       margin-bottom: 20px;
-    }
-    .responsive-player {
-      position: relative;
-      padding-top: 56.25%;
-      height: 0;
-      overflow: hidden;
-      border-radius: 10px;
-      margin-bottom: 10px;
-    }
-    .responsive-player iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: none;
-      border-radius: 10px;
+      display: block;
     }
     .watch-buttons {
-      display: none;
+      display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 15px;
       margin-bottom: 20px;
     }
     .watch-buttons a {
+      display: block;
       text-align: center;
-      padding: 12px;
+      padding: 14px;
       background-color: #ff5722;
       color: white;
       text-decoration: none;
       font-weight: bold;
-      border-radius: 5px;
+      border-radius: 6px;
       font-size: 16px;
     }
-    @media (max-width: 768px) {
-      .desktop-players {
-        display: none;
-      }
-      .watch-buttons {
-        display: flex;
-      }
+    .watch-buttons a:hover {
+      background-color: #e64a19;
+    }
+    .description {
+      color: #ccc;
+      font-size: 15px;
+      line-height: 1.6;
     }
   </style>
 </head>
@@ -80,26 +67,15 @@
   <div class="container">
     <h1>Unfaithful (2002)</h1>
     <p class="tags">Drama, Thriller</p>
-    <img class="poster" src="https://i.ibb.co/JR0WpkY7/MV5-BMDFl-OTJh-ODIt-OTgz-Yi00-Mm-Rj-LTkz-MTkt-ODVh-YTc4-NGUz-NDEy-Xk-Ey-Xk-Fqc-Gc-V1-FMjpg-UX1000.jpg" alt="Unfaithful (2002) Poster" />
+    <img class="poster" src="https://i.ibb.co/JR0WpkY7/MV5-BMDFl-OTJh-ODIt-OTgz-Yi00-Mm-Rj-LTkz-MTkt-ODVh-YTc4-NGUz-NDEy-Xk-Ey-Xk-Fqc-Gc-V1-FMjpg-UX1000.jpg" alt="Unfaithful Poster" />
 
-    <!-- Mobile Buttons -->
     <div class="watch-buttons">
-      <a href="https://streamtape.com/e/3amDvdl2qjUD2g/UF2002" target="_blank">▶️ Watch on StreamTape</a>
-      <a href="https://mxdrop.to/e/4drxzvjeup89xn" target="_blank">▶️ Watch on MixDrop</a>
+      <a href="https://streamtape.com/e/3amDvdl2qjUD2g/UF2002" target="_blank" rel="noopener">▶️ Watch on StreamTape</a>
+      <a href="https://mxdrop.to/e/4drxzvjeup89xn" target="_blank" rel="noopener">▶️ Watch on MixDrop</a>
     </div>
 
-    <!-- Desktop Embedded Players -->
-    <div class="desktop-players">
-      <div class="responsive-player">
-        <iframe src="https://streamtape.com/e/3amDvdl2qjUD2g/UF2002" allowfullscreen></iframe>
-      </div>
-      <div class="responsive-player">
-        <iframe src="https://mxdrop.to/e/4drxzvjeup89xn" allowfullscreen></iframe>
-      </div>
-    </div>
-
-    <p style="margin-top: 20px; color: #ccc;">
-      A New York suburban couple’s marriage takes a dark turn when the wife begins a passionate affair that leads to tragic consequences. *Unfaithful* is a gripping exploration of betrayal, guilt, and consequences.
+    <p class="description">
+      A New York suburban couple’s marriage takes a dark turn when the wife begins a passionate affair that leads to tragic consequences. <em>Unfaithful</em> is a gripping exploration of betrayal, guilt, and consequences.
     </p>
   </div>
 </body>
