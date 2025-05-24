@@ -15,9 +15,9 @@
     .container {
       max-width: 800px;
       margin: auto;
-      padding: 20px;
       background-color: #1c1c1c;
-      border-radius: 10px;
+      padding: 20px;
+      border-radius: 12px;
       box-shadow: 0 0 15px rgba(0,0,0,0.5);
     }
     h1 {
@@ -33,32 +33,13 @@
       border-radius: 10px;
       margin-bottom: 20px;
     }
-    .button-group {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      margin-bottom: 15px;
-      flex-wrap: wrap;
-    }
-    .button-group button {
-      padding: 10px 20px;
-      border: none;
-      background-color: #ff5722;
-      color: white;
-      font-weight: bold;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-    .button-group button:hover {
-      background-color: #e64a19;
-    }
     .responsive-player {
       position: relative;
       padding-top: 56.25%;
       height: 0;
       overflow: hidden;
       border-radius: 10px;
+      margin-bottom: 10px;
     }
     .responsive-player iframe {
       position: absolute;
@@ -69,21 +50,29 @@
       border: none;
       border-radius: 10px;
     }
-    .player-wrapper {
+    .watch-buttons {
       display: none;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 20px;
     }
-    .player-wrapper.active {
-      display: block;
-      margin-bottom: 10px;
-    }
-    .fallback-link {
+    .watch-buttons a {
       text-align: center;
-      margin-top: 10px;
-    }
-    .fallback-link a {
-      color: #ff5722;
-      font-weight: bold;
+      padding: 12px;
+      background-color: #ff5722;
+      color: white;
       text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    @media (max-width: 768px) {
+      .desktop-players {
+        display: none;
+      }
+      .watch-buttons {
+        display: flex;
+      }
     }
   </style>
 </head>
@@ -93,26 +82,19 @@
     <p class="tags">Drama, Thriller</p>
     <img class="poster" src="https://i.ibb.co/JR0WpkY7/MV5-BMDFl-OTJh-ODIt-OTgz-Yi00-Mm-Rj-LTkz-MTkt-ODVh-YTc4-NGUz-NDEy-Xk-Ey-Xk-Fqc-Gc-V1-FMjpg-UX1000.jpg" alt="Unfaithful (2002) Poster" />
 
-    <div class="button-group">
-      <button onclick="switchPlayer('streamtape')">📺 StreamTape</button>
-      <button onclick="switchPlayer('mixdrop')">📺 MixDrop</button>
+    <!-- Mobile Buttons -->
+    <div class="watch-buttons">
+      <a href="https://streamtape.com/e/3amDvdl2qjUD2g/UF2002" target="_blank">▶️ Watch on StreamTape</a>
+      <a href="https://mxdrop.to/e/4drxzvjeup89xn" target="_blank">▶️ Watch on MixDrop</a>
     </div>
 
-    <div id="streamtape" class="player-wrapper active">
+    <!-- Desktop Embedded Players -->
+    <div class="desktop-players">
       <div class="responsive-player">
         <iframe src="https://streamtape.com/e/3amDvdl2qjUD2g/UF2002" allowfullscreen></iframe>
       </div>
-      <div class="fallback-link">
-        <a href="https://streamtape.com/e/3amDvdl2qjUD2g/UF2002" target="_blank">🎬 Open Fullscreen (StreamTape)</a>
-      </div>
-    </div>
-
-    <div id="mixdrop" class="player-wrapper">
       <div class="responsive-player">
         <iframe src="https://mxdrop.to/e/4drxzvjeup89xn" allowfullscreen></iframe>
-      </div>
-      <div class="fallback-link">
-        <a href="https://mxdrop.to/e/4drxzvjeup89xn" target="_blank">🎬 Open Fullscreen (MixDrop)</a>
       </div>
     </div>
 
@@ -120,14 +102,5 @@
       A New York suburban couple’s marriage takes a dark turn when the wife begins a passionate affair that leads to tragic consequences. *Unfaithful* is a gripping exploration of betrayal, guilt, and consequences.
     </p>
   </div>
-
-  <script>
-    function switchPlayer(playerId) {
-      document.querySelectorAll('.player-wrapper').forEach(wrapper => {
-        wrapper.classList.remove('active');
-      });
-      document.getElementById(playerId).classList.add('active');
-    }
-  </script>
 </body>
 </html>
