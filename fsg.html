@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Fifty Shades of Grey (2015) - MovieZCircle</title>
+  <meta name="description" content="Watch Fifty Shades of Grey (2015) online. A romantic drama exploring passion, mystery, and complicated love. Stream now on MovieZCircle." />
+  <link rel="icon" href="https://i.ibb.co/zTvwVs6M/1.png" />
   <style>
     body {
       background-color: #111;
@@ -45,15 +47,32 @@
       text-align: center;
       margin-bottom: 20px;
     }
+    .player-switch {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .player-switch button {
+      margin: 5px;
+      padding: 10px 20px;
+      background-color: #ff5722;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .player-switch button:hover {
+      background-color: #e64a19;
+    }
     .video-player {
+      display: none;
       position: relative;
       padding-bottom: 56.25%;
       height: 0;
       overflow: hidden;
       border-radius: 12px;
-      margin-top: 20px;
     }
-    .video-player iframe, .video-player > div {
+    .video-player iframe {
       position: absolute;
       top: 0;
       left: 0;
@@ -61,18 +80,23 @@
       height: 100%;
       border: none;
     }
+
     .telegram-float {
       position: fixed;
       bottom: 20px;
       right: 20px;
       background-color: #0088cc;
       color: #fff;
-      padding: 10px 15px;
-      border-radius: 30px;
+      padding: 12px 20px;
+      border-radius: 50px;
       font-weight: bold;
       text-decoration: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      transition: background 0.3s ease;
       z-index: 1000;
-      box-shadow: 0 0 10px #0088cc;
+    }
+    .telegram-float:hover {
+      background-color: #007ab8;
     }
   </style>
 </head>
@@ -82,30 +106,50 @@
   </header>
 
   <div class="container">
-    <img class="poster" src="https://i.ibb.co/SXN5s0L/fifty-shades-of-grey.jpg" alt="Fifty Shades of Grey (2015)" />
+    <img class="poster" src="https://i.ibb.co/3yqQfKcX/fsg-2015.jpg" alt="Fifty Shades of Grey Poster" />
     <h1 class="movie-title">Fifty Shades of Grey (2015)</h1>
-    <p class="genre">Drama, Romance</p>
+    <p class="genre">Romance, Drama</p>
 
-    <!-- Webtor Player -->
-    <div class="video-player">
-      <div id="player" class="webtor"></div>
+    <!-- Player Switch Buttons -->
+    <div class="player-switch">
+      <button onclick="showPlayer('voe')">▶️ VOE</button>
+      <button onclick="showPlayer('mixdrop')">▶️ MixDrop</button>
+      <button onclick="showPlayer('streamtape')">▶️ Streamtape</button>
+    </div>
+
+    <!-- VOE Player -->
+    <div id="voe" class="video-player">
+      <iframe src="https://voe.sx/e/y1rv51kk19jq" allowfullscreen allow="autoplay"></iframe>
+    </div>
+
+    <!-- MixDrop Player -->
+    <div id="mixdrop" class="video-player">
+      <iframe src="https://mxdrop.to/e/36p1mvwvfmzzpen" allowfullscreen="true"></iframe>
+    </div>
+
+    <!-- Streamtape Player -->
+    <div id="streamtape" class="video-player">
+      <iframe src="https://streamtape.com/e/7Y3KlJpWdLuMe6/FSG2015" allowfullscreen allow="autoplay"></iframe>
     </div>
   </div>
 
   <!-- Telegram Floating Button -->
-  <a href="https://t.me/movieZcircles" class="telegram-float" target="_blank">Join Telegram</a>
+  <a href="https://t.me/movieZcircles" class="telegram-float" target="_blank">📢 Join Telegram</a>
 
-  <!-- Webtor Player Script -->
+  <!-- Player Switch Script -->
   <script>
-    window.webtor = window.webtor || [];
-    window.webtor.push({
-      id: 'player',
-      magnet: 'magnet:?xt=urn:btih:4d113d28b14ea6cf66950b645f02ff79ec543e0b&dn=Fifty+Shades+of+Grey+%282015%29+%5B1080p%5D&tr=udp%3A%2F%2Ftracker.yify-torrents.com%2Fannounce&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Fexodus.desync.com%3A6969&tr=udp%3A%2F%2Ftracker.istole.it%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2F9.rarbg.com%3A2710&tr=udp%3A%2F%2Fp4p.arenabg.ch%3A1337&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969',
-      poster: 'https://i.ibb.co/SXN5s0L/fifty-shades-of-grey.jpg',
-      subtitles: [],
-      lang: 'en',
-    });
+    function showPlayer(id) {
+      const players = document.querySelectorAll('.video-player');
+      players.forEach(player => player.style.display = 'none');
+      const current = document.getElementById(id);
+      current.style.display = 'block';
+      current.scrollIntoView({ behavior: 'smooth' });
+    }
+    // Show default player
+    showPlayer('voe');
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/@webtor/embed-sdk-js/dist/index.min.js" charset="utf-8" async></script>
+
+  <!-- Ad Script (Optional) -->
+  <script type="text/javascript" src="//pl26725896.profitableratecpm.com/ca/58/4c/ca584c2c393e2b999e9af7ba669b7b43.js"></script>
 </body>
 </html>
